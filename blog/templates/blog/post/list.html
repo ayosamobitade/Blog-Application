@@ -1,5 +1,6 @@
 {% extends "blog/base.html" %}
 {% block title %}My Blog{% endblock %}
+<p class="tags">Tags: {{ post.tags.all|join:", " }} </p>
 {% block content %}
 <h1>My Blog</h1>
 {% for post in posts %}

@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from taggit.models import Tag
 
 # Create your views here.
 from .models import Post, Comment

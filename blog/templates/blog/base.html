@@ -8,17 +8,31 @@
 <link href="{% static 'css/blog.css' %}" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        {% block header %} 
+    <div class="container-sm">
+        <div class="row">
+            <div class="col-8">
+                {% block header %} 
+                {% block blogtitle %}{% endblock %}
         
-        {% endblock %}
-        {% block content %}{% endblock %}
+                {% endblock %}
+                {% block content %}{% endblock %}
             </div>
-            <div id="sidebar">
-            <h2>My blog</h2>
-            <p>This is my blog.</p>
+            <div class="col-4">
+                <h2>My blog</h2>
+                <p>This is my blog.</p>
+                <p>
+                    <a href="{% url "blog:post_feed" %}">Subscribe to my RSS feed</a>
+                    </p>
             </div>
-        {% block footer %}{% endblock %}
+          </div>
+          <div class="row">
+            <div class="col">
+                {% block footer %} This is the footer {% endblock %}
+            </div>
+          </div>
+        
+       
+       
       </div>
 
 

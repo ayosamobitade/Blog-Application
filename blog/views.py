@@ -60,7 +60,7 @@ def post_detail(request, year, month, day, post):
     else:
         comment_form = CommentForm()
 
-        
+
     return render(request, 'blog/post/detail.html',{
         'post': post,
         'comments': comments,
@@ -70,7 +70,7 @@ def post_detail(request, year, month, day, post):
 
 
 
-
+a
 
 
 def post_share(request, post_id):

@@ -70,7 +70,7 @@ def post_detail(request, year, month, day, post):
 
 
 
-a
+
 
 
 def post_share(request, post_id):

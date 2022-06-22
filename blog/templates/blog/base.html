@@ -12,14 +12,14 @@
 <body>
     <div class="container-sm">
         <div class="row">
-            <div class="col-8">
+            <div class="col-9">
                 {% block header %} 
                 {% block blogtitle %}{% endblock %}
         
                 {% endblock %}
                 {% block content %}{% endblock %}
             </div>
-            <div class="col-4">
+            <div class="col-3">
                 <h2>My blog</h2>
                 <p>
                     <a href="{% url "blog:post_feed" %}">Subscribe to my RSS feed</a>

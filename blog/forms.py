@@ -1,8 +1,8 @@
 from .models import Post, Comment
 from django import forms
 from django.contrib.postgres.search import SearchVector
-from .forms import EmailPostForm, CommentForm, SearchForm
-from django.shortcuts import render
+
+
 
 
 class EmailPostForm(forms.Form):

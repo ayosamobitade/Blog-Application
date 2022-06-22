@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from taggit.models import Tag
 from django.db.models import Count
-
+from .forms import EmailPostForm, CommentForm, SearchForm
 
 # Create your views here.
 from .models import Post, Comment

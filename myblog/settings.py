@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'taggit',
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    'markdown'
+    
 
 
 ]

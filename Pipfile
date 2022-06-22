@@ -7,7 +7,7 @@ name = "pypi"
 django = "*"
 django-taggit = "*"
 psycopg2-binary = "*"
-markdown = "*"
+markdown = "==3.2.1"
 
 [dev-packages]
 

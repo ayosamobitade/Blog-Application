@@ -12,6 +12,8 @@ from django.core.mail import send_mail
 from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from django.contrib.postgres.search import TrigramSimilarity
 
+
+
 def post_search(request):
     form = SearchForm()
     query = None
@@ -67,7 +69,7 @@ def post_detail(request, year, month, day, post):
     # List of similar posts
     post_tags_ids = post.tags.values_list('id', flat=True)
     similar_posts = Post.published.filter(tags__in = post_tags_ids).exclude(id=post.id)
-    similar_posts = similar_posts.annotate(same_tag=Count('tag')).order_by('-same_tags', '-publish')[:4]
+    similar_posts = similar_posts.annotate(same_tags=Count('tags')).order_by('-same_tags', '-publish')[:4]
 
     return render(request, 'blog/post/detail.html',{
         'post': post,

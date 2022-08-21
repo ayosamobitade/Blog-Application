@@ -73,7 +73,8 @@ def post_detail(request, year, month, day, post):
         'post': post,
         'comments': comments,
         'new_comment': new_comment,
-        'comment_form': comment_form})
+        'comment_form': comment_form,
+        'similar_posts': similar_posts})
 
 
 

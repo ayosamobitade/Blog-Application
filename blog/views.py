@@ -9,7 +9,7 @@ from django.views.generic import ListView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .forms import EmailPostForm, CommentForm, SearchForm
 from django.core.mail import send_mail
-from django.contrib.postgres.search import SearchVector
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 
 def post_search(request):
     form = SearchForm()

@@ -24,7 +24,7 @@ def post_search(request):
             results = Post.published.annotate(
                 search = search_vector, 
                 rank = SearchRank(search_vector, search_query)
-                ).filter(search = search_query).order_by('rank')
+                ).filter(search = search_query).order_by('-rank')
     return render(request, 'blog/post/search.html',{
         'form':form,
         'query':query,
